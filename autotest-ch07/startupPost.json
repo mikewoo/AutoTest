@@ -1,0 +1,32 @@
+[
+  {
+    "description": "模拟一个不带参数的POST请求",
+    "request": {
+      "uri": "/post_demo",
+      "method":"post"
+    },
+    "response": {
+      "text": "这是一个没有参数的POST请求",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "模拟一个带参数的POST请求",
+    "request": {
+      "uri": "/post_with_params",
+      "method": "post",
+      "forms": {
+        "name": "eric",
+        "sex": "male"
+      }
+    },
+    "response": {
+      "text": "moco POST响应",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  }
+]

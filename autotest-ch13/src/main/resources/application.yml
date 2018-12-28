@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: autotest-ch13
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.33.100:3306/testcase?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: gmm123
+  data:
+    mongodb:
+      host: 192.168.33.100:27017
+
+logging:
+  path: logs
+  file: server.log
+
+mybatis:
+  type-aliases-package: com.mikewoo.autotest.domain
+  mapper-locations: classpath:mapper/*.xml

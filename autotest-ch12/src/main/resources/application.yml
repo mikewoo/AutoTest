@@ -1,0 +1,50 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: autotest-ch12
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.33.100:3306/testcase?useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: gmm123
+
+logging:
+  path: logs
+  file: server.log
+
+mybatis:
+  type-aliases-package: com.mikewoo.autotest.domain
+  mapper-locations: classpath:mapper/*.xml
+
+## 测试URL
+#test:
+#  url: http://localhost:8080
+#
+## 登录测试接口
+#login:
+#  uri: /v1/login
+#
+## 更新用户信息接口(updateUserInfo)
+#user:
+#  info:
+#    update:
+#      uri: /v1/user
+#
+## 获取用户信息接口(getUserInfo)
+#  get:
+#    uri: /v1/user
+#
+## 获取用户列表接口(getUserList)
+#  list:
+#    get:
+#      uri: /v1/user
+#
+## 添加用户接口(addUser)
+#  add:
+#    uri: /v1/user
+
+
+
+

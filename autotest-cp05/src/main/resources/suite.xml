@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="test">
+    <test name="login">
+        <classes>
+            <class name="com.miekwoo.testng.suite.SuiteConfig"/>
+            <class name="com.miekwoo.testng.suite.LoginTest"/>
+        </classes>
+    </test>
+
+    <test name="pay">
+        <classes>
+            <class name="com.miekwoo.testng.suite.SuiteConfig"/>
+            <class name="com.miekwoo.testng.suite.PayTest"/>
+        </classes>
+    </test>
+
+    <test name="ignore">
+        <classes>
+            <class name="com.miekwoo.testng.suite.SuiteConfig"/>
+            <class name="com.miekwoo.testng.suite.IgnoreTest">
+                <methods>
+                    <include name="ignoreTest01"/>
+                    <include name="ignoreTest02"/>
+                    <include name="ignoreTest03"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="runAllGroups">
+        <classes>
+            <class name="com.miekwoo.testng.groups.GroupsOnClass1"/>
+            <class name="com.miekwoo.testng.groups.GroupsOnClass2"/>
+            <class name="com.miekwoo.testng.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+    <test name="runStudentGroup">
+        <groups>
+            <run>
+                <include name="student"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.miekwoo.testng.groups.GroupsOnClass1"/>
+            <class name="com.miekwoo.testng.groups.GroupsOnClass2"/>
+            <class name="com.miekwoo.testng.groups.GroupsOnClass3"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="test" parallel="methods" thread-count="2">
+    <test name="test01">
+        <classes>
+            <class name="com.miekwoo.testng.MutilThreadTestOnXml"/>
+        </classes>
+
+    </test>
+
+    <test name="test02">
+        <classes>
+            <class name="com.miekwoo.testng.MutilThreadTestOnXml"/>
+        </classes>
+    </test>
+</suite>

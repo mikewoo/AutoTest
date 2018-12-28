@@ -1,0 +1,56 @@
+[
+  {
+    "description": "模拟一个返回cookie信息的GET请求",
+    "request": {
+      "uri": "/get_cookies",
+      "method": "get"
+    },
+    "response": {
+      "cookies": {
+        "login": "true"
+      },
+      "text": "获取cookie信息响应！！！",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "模拟一个带cookie信息的GET请求",
+    "request": {
+      "uri": "/get_demo_with_cookies",
+      "method": "get",
+      "cookies": {
+        "login": "true"
+      }
+    },
+    "response": {
+      "text": "携带cookie信息请求响应！！！",
+      "headers":{
+        "Content-Type":"text/html;charset=gbk"
+      }
+    }
+  },
+  {
+    "description": "模拟一个带cookie信息的POST请求",
+    "request": {
+      "uri": "/post_demo_with_cookies",
+      "method": "post",
+      "cookies": {
+        "login": "true"
+      },
+      "json": {
+        "name": "eric",
+        "age": "18"
+      }
+    },
+    "response": {
+      "status": 200,
+      "json": {
+        "name": "eric",
+        "status": "success",
+        "code": "200"
+      }
+    }
+  }
+]
