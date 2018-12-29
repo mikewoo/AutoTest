@@ -59,7 +59,7 @@ public class UserController {
             User tmpUser = new User();
             tmpUser.setUsername(user.getUsername());
             List<User> users = userMapper.getUserInfo(tmpUser);
-            if (Objects.nonNull(users)) {
+            if (Objects.nonNull(users) && !users.isEmpty()) {
                 return ResponseData.build(400, "用户名[" + user.getUsername() + "]已存在", false);
             }
             int count = userMapper.insertSelective(user);
