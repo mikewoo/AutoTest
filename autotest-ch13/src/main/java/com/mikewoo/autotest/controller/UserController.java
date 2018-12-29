@@ -56,6 +56,12 @@ public class UserController {
     public ResponseData addUser(HttpServletRequest request, @RequestBody User user) {
         boolean verify = verifyCookies(request);
         if (verify) {
+            User tmpUser = new User();
+            tmpUser.setUsername(user.getUsername());
+            List<User> users = userMapper.getUserInfo(tmpUser);
+            if (Objects.nonNull(users)) {
+                return ResponseData.build(400, "用户名[" + user.getUsername() + "]已存在", false);
+            }
             int count = userMapper.insertSelective(user);
             if (count > 0) {
                 return ResponseData.ok(true);
